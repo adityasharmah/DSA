@@ -22,7 +22,7 @@ int main()
         }
     }
 
-
+    // Inverted Bar Chart
     for ( int col = 0; col  < max ; col++)
     {
         for ( int row = 0;  row < n; row++)
