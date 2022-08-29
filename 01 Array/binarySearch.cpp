@@ -8,17 +8,20 @@ int binarySearch(int arr[],int n, int data){
     int start = 0;                                       // Initializing Start Index
     int end = n - 1;                                     // Initializing End Index
 
-    while (start <= end)                                 // Loop Until start Index is less than or equal to end index
+    while(start <= end)                                 // Loop Until start Index is less than or equal to end index
     {
         int mid = (start + end) / 2;                     // Calculating Mid Index
 
-        if(arr[mid] == data){                            // If Data is Equal to Mid Index
+        if(arr[mid] == data)
+        {                            // If Data is Equal to Mid Index
             return mid;
         }
-        else if(arr[mid] > data){                        // If Data is Greater Than Mid Index
+        else if(arr[mid] > data)
+        {                        // If Data is Greater Than Mid Index
             end = mid - 1;
         }
-        else{                                            // If Data is Less Than Mid Index
+        else
+        {                                            // If Data is Less Than Mid Index
             start = mid + 1;
         }
     }
