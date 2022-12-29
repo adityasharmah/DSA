@@ -1,7 +1,7 @@
-// Pre Order Traversal of a Binary Tree
-// visit the root node first
-// then visit the left subtree
+// Post Order Tarversal of a Binary Tree
+// visit the left subtree first
 // then visit the right subtree
+// then visit the root node
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -20,17 +20,18 @@ Node * createNode(int data){
     return newNode;
 }
 
-void printPreOrder(struct Node * node)
+void printPostOrder(struct Node * node)
 {
     if(node == NULL)
         return;
     
+    printPostOrder(node -> left);
+    printPostOrder(node -> right);
     cout << node -> data << " ";
-    printPreOrder(node -> left);
-    printPreOrder(node -> right);
 }
 
-int main(){
+int main()
+{
 
     struct Node * root = createNode(1);
     root -> left = createNode(2);
@@ -42,8 +43,8 @@ int main(){
     root -> left -> left -> left = createNode(8);
     root -> left -> right -> right = createNode(9);
 
-    cout << "Pre Order Traversal of the Binary Tree is: ";
-    printPreOrder(root);
+    cout << "Post Order Traversal of the Binary Tree is: ";
+    printPostOrder(root);
 
     return 0;
 }
