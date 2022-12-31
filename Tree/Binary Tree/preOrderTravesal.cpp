@@ -6,12 +6,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Structure of a Node of a Binary Tree
 struct Node{
     int data;
     struct Node *left;
     struct Node *right;
 };
 
+// Function to create a new Node
 Node * createNode(int data){
     Node * newNode = new Node();
     newNode -> data = data;
@@ -20,6 +22,7 @@ Node * createNode(int data){
     return newNode;
 }
 
+// Pre Order Traversal of a Binary Tree
 void printPreOrder(struct Node * node)
 {
     if(node == NULL)
@@ -30,6 +33,7 @@ void printPreOrder(struct Node * node)
     printPreOrder(node -> right);
 }
 
+// Driver Code
 int main(){
 
     struct Node * root = createNode(1);
