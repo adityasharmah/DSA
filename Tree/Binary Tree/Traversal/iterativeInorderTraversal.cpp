@@ -4,17 +4,18 @@ using namespace std;
 
 // A binary tree node
 struct node {
-  int data;
+  int data;                                  
   struct node * left, * right;
 };
 
 // Iterative function for inorder tree traversal
 vector < int > inOrderTrav(node * curr) {
-  vector < int > inOrder;
-  stack < node * > s;
+  vector < int > inOrder;                  // vector to store the inOrder traversal
+  stack < node * > s;                      // stack to store the nodes of the tree
+  // traverse the tree
   while (true) {
     if (curr != NULL) {
-      s.push(curr);
+      s.push(curr);                        // push the current node into the stack
       curr = curr -> left;
     } else {
       if (s.empty()) break;                   // if stack is empty, we are done
@@ -30,10 +31,10 @@ vector < int > inOrderTrav(node * curr) {
 
 // Utility function to create a new tree node
 struct node * newNode(int data) {
-  struct node * node = (struct node * ) malloc(sizeof(struct node));
-  node -> data = data;
-  node -> left = NULL;
-  node -> right = NULL;
+  struct node * node = (struct node * ) malloc(sizeof(struct node));         // Allocate memory for new node
+  node -> data = data;              // Assign data to this node
+  node -> left = NULL;              // Initialize left and right children as NULL
+  node -> right = NULL;             
 
   return (node);
 }
