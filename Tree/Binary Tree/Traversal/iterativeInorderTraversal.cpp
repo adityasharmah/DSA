@@ -17,11 +17,11 @@ vector < int > inOrderTrav(node * curr) {
       s.push(curr);
       curr = curr -> left;
     } else {
-      if (s.empty()) break;
-      curr = s.top();
-      inOrder.push_back(curr -> data);
-      s.pop();
-      curr = curr -> right;
+      if (s.empty()) break;                   // if stack is empty, we are done
+      curr = s.top();                         // else, pop the top item from stack, print it and finally set curr to its right child
+      inOrder.push_back(curr -> data);        // push the data of the node into the vector
+      s.pop();                                // pop the node from the stack
+      curr = curr -> right;                   // set curr to its right child
     }
   }
   return inOrder;
