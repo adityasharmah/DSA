@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Linear Search
 void linearSearch(int arr[], int n, int key){
     for (int i=0;i<n;i++){
         if (arr[i]==key){
@@ -27,5 +28,6 @@ int main(){
     cout << "Enter the value to be searched: ";
     cin >> val1;
   
+    // Function call
     linearSearch(arr,n,val1);
 }
