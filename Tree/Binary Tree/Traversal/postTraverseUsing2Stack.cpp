@@ -10,7 +10,7 @@ struct node {
 
 // Function to perform post order traversal of the tree
 void postOrderTrav(node * curr, vector < int > & postOrder) {
-  if (curr == NULL)
+  if (curr == NULL)                                    // If the current node is NULL,
     return;
 
   postOrderTrav(curr -> left, postOrder);              // Traverse left subtree
@@ -42,7 +42,7 @@ int main() {
   root -> right -> right -> right = newNode(10);
 
   vector < int > postOrder;
-  postOrderTrav(root, postOrder);
+  postOrderTrav(root, postOrder);                   // Perform postOrder traversal
 
   // Print the postOrder traversal
   cout << "The postOrder Traversal is : ";
