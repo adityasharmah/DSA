@@ -25,7 +25,7 @@ struct node * newNode(int data) {
   node -> left = NULL;                                            // Initialize left and right children as NULL
   node -> right = NULL;                                           // Initialize left and right children as NULL
 
-  return (node);
+  return (node);                                                  // Return new node
 }
 
 int main() {
@@ -44,9 +44,10 @@ int main() {
   vector < int > postOrder;
   postOrderTrav(root, postOrder);
 
+  // Print the postOrder traversal
   cout << "The postOrder Traversal is : ";
   for (int i = 0; i < postOrder.size(); i++) {
-    cout << postOrder[i] << " ";
+    cout << postOrder[i] << " ";                     // Print the postOrder traversal
   }
   return 0;
 }
