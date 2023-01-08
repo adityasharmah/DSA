@@ -23,7 +23,7 @@ int main(){
     {
         cin >> arr[i];
     }
-
+    // Value to be searched
     int val1;
     cout << "Enter the value to be searched: ";
     cin >> val1;
