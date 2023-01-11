@@ -18,13 +18,14 @@ public:
         {
             return ans;
         }
-
+        // Queue for BFS
         queue<TreeNode*> q;
         q.push(root);
 
+        // BFS Traversal
         while(!q.empty())
         {
-            vector<int> temp;
+            vector<int> temp;                      // 
             int s = q.size();
             for(int i=0; i<s; i++){  
                 root=q.front();
