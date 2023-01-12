@@ -9,7 +9,7 @@ class Node{
     Node * left;
     Node * right;
 
-    // constructor
+    // constructor to initialize the data and pointers
     Node(int val){
         data = val;
         // left and right are pointers are intialized to NULL 
