@@ -11,42 +11,15 @@
  */
 class Solution {
 public:
-    vector<vector<int>> levelOrderBottom(TreeNode* root) {
-        vector<vector<int>> res;
-
+    int maxDepth(TreeNode* root) {
         if(root == NULL)
         {
-            return res;
+            return 0;
         }
-        queue<TreeNode*> q;
-        q.push(root);
 
-        while(!q.empty())
-        {
-            int s = q.size();
-            vector<int> temp;
+        int leftDepth = maxDepth(root -> left);
+        int rightDepth = maxDepth(root -> right);
 
-            for(int i = 0; i < s; i++)
-            {
-                TreeNode * root = q.front();
-                temp.push_back(root -> val);
-                q.pop();
-
-                if(root -> left != NULL)
-                {
-                    q.push(root -> left);
-                }
-
-                if(root -> right != NULL)
-                {
-                    q.push(root -> right);
-                }
-
-                
-            }
-            res.push_back(temp);
-        }
-        reverse(res.begin(), res.end());
-        return res;
+        return 1 + max(leftDepth, rightDepth);
     }
 };
