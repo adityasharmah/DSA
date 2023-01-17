@@ -12,8 +12,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- // 
- //
+ // time complexity: O(n) where n is the number of nodes in the tree
+ // TreeNode* p = new TreeNode(1);
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
