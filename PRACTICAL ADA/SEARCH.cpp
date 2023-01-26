@@ -1,3 +1,5 @@
+// Linear Search
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -11,6 +13,7 @@ void linearSearch(int arr[], int n, int key){
     cout << "Element not found" << endl;
 }
 
+// Driver Code
 int main(){
 
     int n;
@@ -24,8 +27,8 @@ int main(){
         cin >> arr[i];
     }
     // Value to be searched
-    int val1;
-    cout << "Enter the value to be searched: ";
+    int val1; 
+    cout << "Enter the value to be searched: ";         
     cin >> val1;
   
     // Function call
