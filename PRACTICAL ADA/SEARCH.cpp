@@ -33,4 +33,5 @@ int main(){
   
     // Function call
     linearSearch(arr,n,val1);
+    return 0;
 }

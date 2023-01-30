@@ -73,32 +73,36 @@ void display(Node* node)
   str += node->right != nullptr ? to_string(node->right->data) : ".";      // if the right child is not null then return the data of the right child else return "."
   cout << str << endl;                                                     // print the string
 
-  display(node->left);
-  display(node->right);
+  display(node->left);                                                     // display the left and right subtree
+  display(node->right);                                                    // display the left and right subtree
 }
 
 
+// size of the tree
 int size(Node* node)
 {
   return node == nullptr ? 0 : size(node->left) + size(node->right) + 1;
 }
 
+// height of the tree
 int height(Node* node)
 {
   return node == nullptr ? -1 : max(height(node->left), height(node->right)) + 1;
 }
 
+// maximum of the tree
 int maximum(Node* node)
 {
   return node == nullptr ? -1e8 : max(max(maximum(node->left), maximum(node->right)), node->data);
 }
 
-
+// sum of the tree
 int sum(Node* root) {
 
   return root == nullptr ? 0 : sum(root->left) + sum(root->right) + root->data;
 }
 
+// main function
 int main()
 {
 
