@@ -1,5 +1,7 @@
 // Size, Sum, Maximum And Height Of A Binary Tree
 // https://www.pepcoding.com/resources/online-java-foundation/binary-tree/size-sum-max-height-official/ojquestion
+
+
 // 1. You are given a partially written BinaryTree class.
 // 2. You are required to complete the body of size, sum, max and height function. The functions are expected to
 //     2.1. size - return the number of nodes in BinaryTree
@@ -63,13 +65,13 @@ Node* constructTree(vector<int>& arr)                          // construct the 
 // display the tree
 void display(Node* node)
 {
-  if (node == nullptr)
+  if (node == nullptr) 
     return;
   string str = "";
-  str += node->left != nullptr ? to_string(node->left->data) : ".";
-  str += " <- " + to_string(node->data) + " -> ";
-  str += node->right != nullptr ? to_string(node->right->data) : ".";
-  cout << str << endl;
+  str += node->left != nullptr ? to_string(node->left->data) : ".";        // if the left child is not null then return the data of the left child else return "."
+  str += " <- " + to_string(node->data) + " -> ";                          // return the data of the node
+  str += node->right != nullptr ? to_string(node->right->data) : ".";      // if the right child is not null then return the data of the right child else return "."
+  cout << str << endl;                                                     // print the string
 
   display(node->left);
   display(node->right);
