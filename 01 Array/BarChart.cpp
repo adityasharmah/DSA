@@ -22,6 +22,7 @@ int main()
         }
     }
     
+    
     for ( int col = max; col  >= 1; col--)
     {
         for ( int row = 0;  row < n; row++)
