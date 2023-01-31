@@ -1,7 +1,8 @@
+
 #include <iostream>
 using namespace std;
  
- // 
+// gcd
 int gcd(int n1, int n2)
 {
     while ( n1 % n2 != 0)
@@ -12,7 +13,7 @@ int gcd(int n1, int n2)
     }
     return n2;
 }
-// 
+// lcm
 int lcm(int n1,int n2)
 {
     int denominator = gcd(n1,n2);
