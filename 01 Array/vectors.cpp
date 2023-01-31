@@ -1,10 +1,16 @@
- #include<iostream>
- #include<vector>
+ // vector is a dynamic array which can be resized at run time.
+ // vector is a template class which is defined in header file <vector>
+ // vector is a class which is defined in std namespace.
+
+ 
+#include<iostream>
+#include<vector>
 
 using namespace std;
 
 int main()
 {
+    // 
     vector<int> array;
     
     // Inserting element in vector 
