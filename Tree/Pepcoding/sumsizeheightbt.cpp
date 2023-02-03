@@ -99,7 +99,7 @@ int maximum(Node* node)
 // sum of the tree
 int sum(Node* root) {
 
-  return root == nullptr ? 0 : sum(root->left) + sum(root->right) + root->data;
+  return root == nullptr ? 0 : sum(root->left) + sum(root->right) + root->data;   // return the sum of the left and right subtree and the data of the node
 }
 
 // main function
