@@ -68,8 +68,9 @@ int main() {
         cin >> dlist[i];
     }
 
+     
     Node* root = construct(dlist);
-    int sz = size(root);
+    int sz = size(root);                       // size of the tree
     cout << sz << endl;
     // display(root);
 }
