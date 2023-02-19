@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+// Height of a tree is the maximum distance between the root and any leaf node in the tree
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
