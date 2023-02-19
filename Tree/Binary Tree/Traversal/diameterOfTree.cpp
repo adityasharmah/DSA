@@ -9,6 +9,9 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+// Diameter of a tree is the maximum distance between any two nodes in the tree 
+
 class Solution {
 public:
     int ans = 0;
