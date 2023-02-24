@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// factorial of n = n * factorial of n-1
 int factorial(int n)
 {
     if(n==0)
