@@ -1,8 +1,10 @@
- 
+// factorial till n
+
 
 #include <iostream>
 using namespace std;
 
+// factorial of n = n * factorial of n-1
 int factorial(int n)
 {
     int fact = 1;
@@ -15,7 +17,7 @@ int factorial(int n)
 }
 
 
-
+// factorial of n = n * factorial of n-1
 int main() {
 	int n;
     cin >> n;
