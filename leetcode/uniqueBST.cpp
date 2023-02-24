@@ -16,6 +16,7 @@
 
 class Solution {
 public:
+    
     vector<TreeNode*> generateTrees(int n) {
         if(n==0)
         {
@@ -23,7 +24,7 @@ public:
         }
         return generateTreesHelper(1, n);
     }
-
+    
     vector<TreeNode*> generateTreesHelper(int start, int end)
     {
         vector<TreeNode*> trees;
