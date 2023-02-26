@@ -33,6 +33,12 @@ public:
             return trees;
         }
 
+        // pick up a root
+        // for each root, we can get a left subtree set and a right subtree set.
+        // pick one from each and link them to the root.
+        // repeat the process until the tree is complete.
+
+        
         for (int i = start; i <= end; i++) {
         std::vector<TreeNode*> leftSubtrees = generateTreesHelper(start, i-1);
         std::vector<TreeNode*> rightSubtrees = generateTreesHelper(i+1, end);
