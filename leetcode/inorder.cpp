@@ -17,13 +17,16 @@ class Solution {
 public:
     vector<int> arr;
     vector<int> inorderTraversal(TreeNode* root) {
+        // left, root, right
         if(root == NULL)
         {
             return arr;
         }
-
+        // left
         inorderTraversal(root -> left);
+        // root
         arr.push_back(root -> val);
+        // right
         inorderTraversal(root -> right);
 
         return arr;
