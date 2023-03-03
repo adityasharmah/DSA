@@ -18,6 +18,7 @@ public:
         if(root == NULL)
              return arr;
         
+        // root, left, right
         arr.push_back(root -> val);
         preorderTraversal(root -> left);
         preorderTraversal(root -> right);
