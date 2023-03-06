@@ -1,6 +1,11 @@
+// leetcode: https://leetcode.com/problems/binary-tree-maximum-path-sum/
+// Link: https://leetcode.com/problems/binary-tree-maximum-path-sum/
+
+// // leetcode 124. Binary Tree Maximum Path Sum
 class Solution {
 public:
-    int max_sum=INT_MIN;
+    // constructor
+    int max_sum=INT_MIN;               // maximum
      int max_gain(TreeNode* root)
     {
         if(!root)return 0;
