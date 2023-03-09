@@ -8,6 +8,7 @@ public:
     int max_sum=INT_MIN;               // maximum
      int max_gain(TreeNode* root)
     {
+        // base case
         if(!root)return 0;
         int l=max(max_gain(root->left),0);
         int r=max(max_gain(root->right),0);
@@ -15,6 +16,7 @@ public:
         max_sum=max(max_sum,new_price);
         return root->val+max(l,r);
     }
+    // main function
     int maxPathSum(TreeNode* root) {
         max_gain(root);
         return max_sum;
