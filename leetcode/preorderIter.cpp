@@ -26,15 +26,17 @@ public:
         st.push(root);                                     // Push the root node into the stack
         while(!st.empty())
         {
-            
+            // Pop the top element of the stack and push it into the array
             root = st.top();                              // Get the top element of the stack
             st.pop();                                     // Pop the top element of the stack
             arr.push_back(root -> val);                   // Push the value of the root node into the array
+            
             
             if(root -> right != NULL)
             {
                 st.push(root -> right);
             }
+            
             if(root -> left != NULL)
             {
                 st.push(root -> left);
