@@ -10,10 +10,10 @@ public:
     {
         // base case
         if(!root)return 0;
-        int l=max(max_gain(root->left),0);
-        int r=max(max_gain(root->right),0);
-        int new_price=root->val+l+r;
-        max_sum=max(max_sum,new_price);
+        int l=max(max_gain(root->left),0);    // if left is negative, then we don't consider it
+        int r=max(max_gain(root->right),0);   // if right is negative, then we don't consider it
+        int new_price=root->val+l+r;          // new price
+        max_sum=max(max_sum,new_price);       // update the maximum
         return root->val+max(l,r);
     }
     // main function
