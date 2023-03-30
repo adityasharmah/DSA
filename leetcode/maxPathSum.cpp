@@ -1,7 +1,8 @@
 // leetcode: https://leetcode.com/problems/binary-tree-maximum-path-sum/
 // Link: https://leetcode.com/problems/binary-tree-maximum-path-sum/
-
 // // leetcode 124. Binary Tree Maximum Path Sum
+
+// Given a non-empty binary tree, find the maximum path sum.
 class Solution {
 public:
     // constructor
